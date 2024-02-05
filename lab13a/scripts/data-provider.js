@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 
 // for now, we will get our data by reading the provided json file
-const file = process.env.DATAFILE;
+const file = 'artists.json';
 const jsonPath = path.join(__dirname, 'data', file);
 // read file contents synchronously
 const jsonData = fs.readFileSync(jsonPath, 'utf8');
