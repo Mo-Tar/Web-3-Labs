@@ -14,11 +14,24 @@
 <script type="text/babel">
 
 /* different ways to create functional components */
-
+const OkButton = () => { 
+  return <button className="button is-primary">Ok</button> 
+} 
+const AnythingButton = () => { 
+  const label = "Anything"; 
+  return <button className="button">{label}</button> 
+}
 
 
 /* Combining components */
-
+const SimpleHeader = function() { 
+  return ( 
+    <div className="buttons"> 
+      <OkButton /> 
+      <AnythingButton /> 
+    </div> 
+  ) 
+}
 
 const container = document.querySelector('#react-container');   
 /* You will also need to modify this line */
